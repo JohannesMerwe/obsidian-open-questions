@@ -60,10 +60,17 @@ npm run build    # tsc + esbuild production
 npm run lint
 ```
 
-Point a throwaway dev vault's `.obsidian/plugins/keel-open-questions/` at this directory (or symlink
-`main.js`, `manifest.json`, `styles.css`) and use the hot-reload plugin. Releases are
-GitHub releases whose tag equals the `manifest.json` version; the workflow in
-`.github/workflows/release.yml` builds and attaches the artifacts. Beta installs through BRAT.
+Point a throwaway dev vault's `.obsidian/plugins/keel-open-questions/` at this directory (a
+symlink works) and drop an empty `.hotreload` file here so the
+[hot-reload](https://github.com/pjeby/hot-reload) plugin reloads it on every rebuild. Releases
+are GitHub releases whose tag equals the `manifest.json` version, no `v`; the workflow in
+`.github/workflows/release.yml` builds and attaches `main.js`, `manifest.json` and `styles.css`.
+
+## Install
+
+Until the plugin is on the community registry, install it with
+[BRAT](https://github.com/TfTHacker/obsidian42-brat): *Add beta plugin* →
+`JohannesMerwe/obsidian-open-questions`. Requires Obsidian 1.13.0 or later.
 
 ## Agent skills
 
