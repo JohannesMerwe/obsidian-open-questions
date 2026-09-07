@@ -1,0 +1,10 @@
+{
+	"id": "keel-open-questions",
+	"name": "Keel Open Questions",
+	"version": "0.1.0",
+	"minAppVersion": "1.13.0",
+	"description": "Turn question callouts written by an AI agent into clickable choices that resolve into dated decisions in the note.",
+	"author": "Johannes Merwe",
+	"authorUrl": "https://github.com/JohannesMerwe",
+	"isDesktopOnly": false
+}
