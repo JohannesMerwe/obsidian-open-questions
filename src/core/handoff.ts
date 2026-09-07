@@ -8,6 +8,16 @@ export interface OpenQuestion {
 	block: QuestionBlock;
 }
 
+/** True when `path` is `root` or below it; a null or empty root is the whole vault. */
+export function withinRoot(path: string, root: string | null): boolean {
+	return root === null || root === '' || path === root || path.startsWith(root + '/');
+}
+
+/** The path as an agent sees it from the workspace directory, else the vault path. */
+export function relativeTo(path: string, root: string | null): string {
+	return root && withinRoot(path, root) ? path.slice(root.length + 1) : path;
+}
+
 function link(item: OpenQuestion): string {
 	const label = item.block.id + ' ' + item.block.title;
 	return '[' + label.replace(/[[\]]/g, '') + '](' + encodeURI(item.path) + ')';
