@@ -78,10 +78,11 @@ Until the plugin is on the community registry, install it with
 phrase options, how to check for answers at session start, how to hand off at session end,
 and what it must never do (resolve a question itself):
 
-- `agent/claude/keel-open-questions/SKILL.md` — copy the folder into `.claude/skills/`.
-- `agent/copilot/keel-open-questions.prompt.md` — copy into `.github/prompts/`.
-
-Keel links them for you once its skills linking lands.
+- `agent/claude/keel-open-questions/SKILL.md` — on a machine where this repo is a declared checkout,
+  `keel start` links it into `~/.claude/skills/` and `keel stop` unlinks it (keel
+  0.1, KEEL-42). Without keel, copy the folder into `.claude/skills/`.
+- `agent/copilot/keel-open-questions.prompt.md` — copy into `.github/prompts/`; keel does not link
+  Copilot prompts yet (where they belong on a machine is an open question).
 
 ## Tests
 
